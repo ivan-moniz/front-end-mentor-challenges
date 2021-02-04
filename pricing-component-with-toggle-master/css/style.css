@@ -1,0 +1,302 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gray-blue: hsl(240, 78%, 98%);
+    --light-gray-blue: hsl(234, 14%, 74%);
+    --grayish-blue: hsl(233, 13%, 49%);
+    --dark-gray-blue:  hsl(232, 13%, 33%);
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--gray-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+h1, h2 {
+    font-size: 2rem;
+    color: var(--dark-gray-blue);
+}
+p {
+    border-bottom: 1px solid #f5f5f5;
+    padding: .8rem 0;
+}
+
+img {
+    width: 100%;
+}
+.showcase {
+    background-image: url('../images/bg-top.svg');
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    overflow: visible;
+}
+
+/* utilities */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;  
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 1.5rem;
+    color: var(--dark-gray-blue);
+}
+.center h1 {
+    color: var(--grayish-blue);
+}
+/* toggle button styling */
+.toggle {
+    padding-top: 1rem;
+    display: flex;  
+}
+.toggle span {
+    font-weight: bold;
+    padding: 0 2rem;
+    color: var(--light-gray-blue);
+}
+.label {
+    width: 50px;
+    height: 26px;
+    background: linear-gradient(to left, hsl(237, 63%, 64%) 0%,  hsl(236, 72%, 79%) 100%);
+    border-radius: 50px;
+    display: flex;
+    position: relative;
+    padding: 2px;
+}
+.ball {
+    background-color: #fff;
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+.checkbox {
+    display: none;
+}
+.checkbox:checked + .label .ball {
+   transform: translateX(24px) ;
+}
+
+/* card styling */
+.grid {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: visible;
+    gap: 0;
+    padding-top: 3rem;
+}
+/* middle card with a little of hard styling */
+.grid-2 {
+    height: 450px !important;
+    box-shadow: 0px 10px 10px 5px #ccc !important;
+    background: linear-gradient(to top,hsl(237, 63%, 64%) 0%,  hsl(236, 72%, 79%) 100%);
+    border-radius: 10px;
+    color: #fff;
+}
+.grid-2 h1, .grid-2 p {
+    color: #fff !important;
+}
+
+/* h1 styling on each grid */
+.grid-1 h1,
+.grid-2 h1, 
+.grid-3 h1 {
+    border-bottom: 1px solid #f5f5f5;
+    padding: 1rem 0;
+    font-size: 3rem;
+    color: var(--dark-gray-blue); 
+}
+
+/* grid 1 and 3 color changing */
+.grid-1,.grid-3 {
+    background-color: #fff;   
+}
+/* styling grid 1 */
+.grid-1 {
+    transform: translate(13%, 2%);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+/* grid 3 styiling */
+.grid-3 {
+    transform: translate(-13%, 2%);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+/* third card h3 and paragraph style application */
+.grid-1 h3, p {
+    color: var(--grayish-blue);
+    font-weight: bold;
+}
+
+.grid-3 h3, p {
+    color: var(--grayish-blue);
+    font-weight: bold;
+}
+
+/* apply same styles to all of the 3 cards  */
+.box {
+    height: 400px;
+    width: 300px;
+    padding: 0rem 3rem;
+    box-shadow: 0px 2px 2px 0px #ccc; 
+}
+
+.flex {
+    margin-top: 2rem;
+}
+/* buttons styling  */
+.btn-primary {
+    padding: 6px 55px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: linear-gradient(to left,hsl(237, 63%, 64%) 0%,  hsl(236, 72%, 79%) 100%);
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid hsl(236, 72%, 79%);
+    letter-spacing: 1px;
+}
+
+.btn-primary:focus {
+    outline: none;
+}
+.btn-primary:hover {
+    background: #fff;
+    color: hsl(237,63%, 64%);
+    border: 1px var(--light-gray-blue) solid;
+}
+/* grid 2 button styles */
+.grid-2 .btn-primary {
+    background: #fff;
+    color: hsl(237,63%, 64%); 
+}
+
+.grid-2 .btn-primary:hover {
+    background: linear-gradient(to left,hsl(237, 63%, 64%) 0%,  hsl(236, 72%, 79%) 100%);
+    color: #fff;
+}
+
+/* cover image bottom */
+.bg-bottom {
+   position: absolute;
+   z-index: -1;
+   bottom: -50px;
+   left: 10px;
+}
+
+
+/* media querie for tablets */
+@media screen and (max-width: 768px) {
+    .showcase {
+        background-position: right;
+        background-repeat: no-repeat;
+       
+    }
+   
+    .center h1 {
+        font-size: 2rem;
+        color: var(--grayish-blue);
+    }
+    .container {
+        padding: 20px 200px;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+    }
+    .grid-1 {
+        transform: translate(0,0);
+        border-radius: 8px;
+    }
+    .grid-3 {
+        transform: translate(0,0);
+        border-radius: 8px;
+    }
+    
+    .bg-bottom {
+        display: none;
+    }
+}
+
+/* mobile screens and down */
+@media screen and (max-width: 500px) {
+    .showcase {
+        background-position: right;
+        
+    }
+   
+    .center h1 {
+        font-size: 2rem;
+        color: var(--grayish-blue);
+    }
+    .container {
+        padding: 20px 200px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+    }
+    .grid-1 {
+        transform: translate(0,0);
+        border-radius: 8px;
+    }
+    .grid-3 {
+        transform: translate(0,0);
+        border-radius: 8px;
+    }
+    
+    .bg-bottom {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 376px) {
+    .showcase {
+        background-position: left;
+        height: 100vh;
+        width: 100%;
+    }
+    .container {
+        padding: 20px 80px;
+    }
+    .center h1 {
+        padding: 1rem 0;
+    }
+    .grid {
+        padding-top: 5rem;
+    }
+}

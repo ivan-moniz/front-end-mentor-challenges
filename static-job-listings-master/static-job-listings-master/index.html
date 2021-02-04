@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Job Listings</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div type="text" id="inputFilter" class="input">
+    
+    </div>  
+
+    <div class="container-top"></div>
+    <div class="container-body" id="container">
+
+      <!-- PhotoSnap card -->
+      <div class="frontend senior HTML javascript CSS card">
+        <div class="card-body">
+          <div class="card-img">
+            <img src="./images/photosnap.svg" alt="photosnap Company">
+          </div>
+          <div class="flex">
+            <div class="head-title">
+              <p class="company">Photosnap</p>
+              <p class="new">new!</p>
+              <p class="featured">featured</p>
+            </div>
+            <div class="body-title">
+              <p> Senior Frontend Developer</p>
+            </div>
+            <div class="footer-title">
+              <p> 1d ago</p>
+              <span>&dot;</span>
+              <p> Full Time</p>
+              <span>&dot;</span>
+              <p>USA Only</p>
+            </div>
+          </div>
+
+          <div class="tags ml-12">
+            <button class="btn btn-role" data-role="frontend">Frontend</button>
+            <button class="btn btn-level" data-level="senior">Senior</button>
+            <button class="btn btn-languages" data-languages="HTML">HTML</button>
+            <button class="btn btn-languages" data-languages="CSS">CSS</button>
+            <button class="btn btn-languages" data-languages="javascript">JavaScript</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Manage card -->
+      <div class="card fullstack midweight python react">
+        <div class="card-body">
+          <div class="card-img">
+            <img src="./images/manage.svg" alt="Manage Company">
+          </div>
+          <div class="flex">
+            <div class="head-title">
+              <p class="company">Manage</p>
+              <p class="new">new!</p>
+              <p class="featured">featured</p>
+            </div>
+            <div class="body-title">
+              <p> Fullstack Developer</p>
+            </div>
+            <div class="footer-title">
+              <p>2d ago</p>
+              <span>&dot;</span>
+              <p>Part Time</p>
+              <span>&dot;</span>
+              <p>Remote</p>
+            </div>
+
+          </div>
+
+          <div class="tags ml-16">
+            <button class="btn btn-role" data-role="fullstack">Fullstack</button>
+            <button class="btn btn-level" data-level="midweight">Midweight</button>
+            <button class="btn btn-languages" data-languages="python">Python</button>
+            <button class="btn btn-tools" data-tools="react">React</button>
+          </div>
+         
+
+        </div>
+      </div>
+
+      <!-- Account card -->
+      <div class="card frontend junior javascript sass react">
+        <div class="card-body">
+          <div class="card-img">
+            <img src="./images/account.svg" alt="Account Company">
+          </div>
+          <div class="flex">
+            <div class="head-title">
+              <p class="company">Account</p>
+              <p class="new">new!</p>
+              
+            </div>
+            <div class="body-title">
+              <p> Junior Frontend Developer</p>
+            </div>
+            <div class="footer-title">
+              <p>2d ago</p>
+              <span>&dot;</span>
+              <p>Part Time</p>
+              <span>&dot;</span>
+              <p>USA only</p>
+            </div>
+
+          </div>
+
+          <div class="tags ml-5">
+            <button class="btn btn-role" data-role="frontend">Frontend</button>
+            <button class="btn btn-level" data-level="junior">Junior</button>
+            <button class="btn btn-languages" data-languages="javascript">JavaScript</button>
+            <button class="btn btn-tools" data-tools="sass">Sass</button>
+            <button class="btn btn-tools" data-tools="react">React</button>
+          </div>
+         
+
+        </div>
+      </div>
+
+      <!-- MyHome card -->
+      <div class="frontend junior javascript CSS card">
+        <div class="card-body">
+          <div class="card-img">
+            <img src="./images/myhome.svg" alt="Myhome Company">
+          </div>
+          <div class="flex">
+            <div class="head-title">
+              <p class="company">MyHome</p>
+            </div>
+            <div class="body-title">
+              <p> Junior Frontend Developer</p>
+            </div>
+            <div class="footer-title">
+              <p>5d ago</p>
+              <span>&dot;</span>
+              <p>Contract</p>
+              <span>&dot;</span>
+              <p>USA only</p>
+            </div>
+
+          </div>
+
+          <div class="tags ml-14">
+            <button class="btn btn-role" data-role="frontend">Frontend</button>
+            <button class="btn btn-level" data-level="junior">Junior</button>
+            <button class="btn btn-languages" data-languages="CSS">CSS</button>
+            <button class="btn btn-languages" data-languages="javascript">JavaScript</button>
+            
+          </div>
+         
+
+        </div>
+      </div>
+
+      <!-- Loop Studios  card-->
+      <div class="card fullstack midweight javascript sass ruby">
+        <div class="card-body">
+          <div class="card-img">
+            <img src="./images/loop-studios.svg" alt="loop-studios Company">
+          </div>
+          <div class="flex">
+            <div class="head-title">
+              <p class="company">Loop Studios</p>
+            </div>
+            <div class="body-title">
+              <p> Software Engineer</p>
+            </div>
+            <div class="footer-title">
+              <p>1w ago</p>
+              <span>&dot;</span>
+              <p>Full Time</p>
+              <span>&dot;</span>
+              <p>Worldwide</p>
+            </div>
+
+          </div>
+
+          <div class="tags">
+            <button class="btn btn-role" data-role="fullstack">Fullstack</button>
+            <button class="btn btn-level" data-level="midweight">Midweight</button>
+            <button class="btn btn-languages" data-languages="javascript">JavaScript</button>
+            <button class="btn btn-tools" data-tools="sass">Sass</button>
+            <button class="btn btn-languages" data-languages="ruby">Ruby</button>
+            
+          </div>
+         
+
+        </div>
+      </div>
+
+      <!-- FaceIt card -->
+      <div class="card backend junior ruby RoR">
+        <div class="card-body">
+          <div class="card-img">
+            <img src="./images/faceit.svg" alt="FaceIt Company">
+          </div>
+          <div class="flex">
+            <div class="head-title">
+              <p class="company">FaceIt</p>
+            </div>
+            <div class="body-title">
+              <p> Junior Backend Developer</p>
+            </div>
+            <div class="footer-title">
+              <p>2w ago</p>
+              <span>&dot;</span>
+              <p>Full Time</p>
+              <span>&dot;</span>
+              <p>UK only</p>
+            </div>
+
+          </div>
+
+          <div class="tags ml-20">
+            <button class="btn btn-role" data-role="backend">Backend</button>
+            <button class="btn btn-level" data-level="junior">Junior</button>
+            <button class="btn btn-languages" data-languages="ruby">Ruby</button>
+            <button class="btn btn-tools" data-tools="RoR">RoR</button>
+            
+          </div>
+         
+
+        </div>
+      </div>
+
+      <!-- Shortly card-->
+      <div class="card frontend junior HTML sass javascript">
+        <div class="card-body">
+          <div class="card-img">
+            <img src="./images/shortly.svg" alt="Shortly Company">
+          </div>
+          <div class="flex">
+            <div class="head-title">
+              <p class="company">Shortly</p>
+            </div>
+            <div class="body-title">
+              <p> Junior Developer</p>
+            </div>
+            <div class="footer-title">
+              <p>2w ago</p>
+              <span>&dot;</span>
+              <p>Full Time</p>
+              <span>&dot;</span>
+              <p>Worldwide</p>
+            </div>
+
+          </div>
+
+          <div class="tags ml-11">
+            <button class="btn btn-role" data-role="frontend">Frontend</button>
+            <button class="btn btn-level" data-level="junior">Junior</button>
+            <button class="btn btn-languages" data-languages="HTML">HTML</button>
+            <button class="btn btn-tools" data-tools="sass">Sass</button>
+            <button class="btn btn-languages" data-languages="javascript">JavaScript</button>
+            
+          </div>
+         
+
+        </div>
+      </div>
+
+      <!-- Insure card -->
+      <div class="card frontend junior vue javascript sass">
+        <div class="card-body">
+          <div class="card-img">
+            <img src="./images/insure.svg" alt="Insure Company">
+          </div>
+          <div class="flex">
+            <div class="head-title">
+              <p class="company">Insure</p>
+            </div>
+            <div class="body-title">
+              <p> Junior Frontend Developer</p>
+            </div>
+            <div class="footer-title">
+              <p>2w ago</p>
+              <span>&dot;</span>
+              <p>Full Time</p>
+              <span>&dot;</span>
+              <p>USA only</p>
+            </div>
+
+          </div>
+
+          <div class="tags ml-10">
+            <button class="btn btn-role" data-role="frontend">Frontend</button>
+            <button class="btn btn-level" data-level="junior">Junior</button>
+            <button class="btn btn-tools" data-tools="vue">Vue</button>
+            <button class="btn btn-languages" data-languages="javascript">JavaScript</button>
+            <button class="btn btn-tools" data-tools="sass">Sass</button>
+            
+          </div>
+         
+
+        </div>
+      </div>
+
+      <!-- EyeCam Co. card -->
+      <div class="card fullstack midweight javascript python django">
+        <div class="card-body">
+          <div class="card-img">
+            <img src="./images/eyecam-co.svg" alt="Eyecam Co. Company">
+          </div>
+          <div class="flex">
+            <div class="head-title">
+              <p class="company">Eyecam Co.</p>
+            </div>
+            <div class="body-title">
+              <p> Full Stack Engineer</p>
+            </div>
+            <div class="footer-title">
+              <p>3w ago</p>
+              <span>&dot;</span>
+              <p>Full Time</p>
+              <span>&dot;</span>
+              <p>Worldwide</p>
+            </div>
+
+          </div>
+
+          <div class="tags ml-6">
+            <button class="btn btn-role" data-role="fullstack">Fullstack</button>
+            <button class="btn btn-level" data-level="midweight">Midweight</button>
+            <button class="btn btn-languages" data-languages="javascript">JavaScript</button>
+            <button class="btn btn-tools" data-tools="django">Django</button>
+            <button class="btn btn-languages" data-languages="python">Python</button>
+            
+          </div>
+         
+
+        </div>
+      </div>
+
+      <!-- Air filter company card -->
+      <div class="card frontend junior react sass javascript">
+        <div class="card-body">
+          <div class="card-img">
+            <img src="./images/the-air-filter-company.svg" alt="Air Filter Company">
+          </div>
+          <div class="flex">
+            <div class="head-title">
+              <p class="company">The Air Filter Company</p>
+            </div>
+            <div class="body-title">
+              <p> Front-end Dev</p>
+            </div>
+            <div class="footer-title">
+              <p>1mo ago</p>
+              <span>&dot;</span>
+              <p>Part Time</p>
+              <span>&dot;</span>
+              <p>Worldwide</p>
+            </div>
+
+          </div>
+
+          <div class="tags ml-4">
+            <button class="btn btn-role" data-role="frontend">Frontend</button>
+            <button class="btn btn-level" data-level="junior">Junior</button>
+            <button class="btn btn-tools" data-tools="react">React</button>
+            <button class="btn btn-tools" data-tools="sass">Sass</button>
+            <button class="btn btn-languages" data-languages="javascript">JavaScript</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+   </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Ivan Moniz</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

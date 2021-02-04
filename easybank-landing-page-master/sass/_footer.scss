@@ -1,0 +1,133 @@
+.footer {
+  background-color: $dark-blue;
+  padding: 4rem 8rem;
+  height: 250px;
+  width: 100%;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 300px 150px 460px 300px;
+    align-items: center;
+
+    &__start {
+      .footer__img {
+        filter: invert(0.2) brightness(2.5) grayscale(0) contrast(3) saturate(4)
+          hue-rotate(310deg) sepia(0.1);
+      }
+      .footer__icons {
+        display: flex;
+        padding-top: 2rem;
+
+        .footer__icons__svg {
+          cursor: pointer;
+          padding-right: 1rem;
+
+          svg:hover {
+            path {
+              fill: $lime-green;
+              transition: 2s ease;
+            }
+          }
+        }
+      }
+    }
+    .footer__links {
+      list-style-type: none;
+
+      .footer__link {
+        padding: 0.5rem 0;
+
+        .footer__anchor {
+          color: $white;
+          text-decoration: none;
+        }
+
+        .footer__anchor:hover {
+          color: $lime-green;
+          transition: 2s ease-in;
+        }
+      }
+    }
+
+    .footer__end {
+      .footer__end__descritpion {
+        color: $grayish-blue;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+// SMALL SCREEN STYLING 
+@media only screen and (max-width: $bp-small) {
+  .footer {
+    background-color: $dark-blue;
+    padding: 0;
+    height: 600px;
+  
+    &__container {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      text-align: center;
+  
+      &__start {
+        .footer__img {
+          filter: invert(0.2) brightness(2.5) grayscale(0) contrast(3) saturate(4)
+            hue-rotate(310deg) sepia(0.1);
+          margin: 2em 0;
+          width: 30%;
+        }
+  
+        .footer__icons {
+          display: flex;
+          justify-content: center;
+          padding-bottom: 1em;
+  
+          .footer__icons__svg {
+            cursor: pointer;
+            padding-right: 1rem;
+  
+            .footer__svg {
+              width: 100%;
+            }
+  
+            svg:hover {
+              path {
+                fill: $lime-green;
+                transition: 2s ease;
+              }
+            }
+          }
+        }
+      }
+      .footer__links {
+        list-style-type: none;
+  
+        .footer__link {
+          padding: 0.5rem 0;
+  
+          .footer__anchor {
+            color: $white;
+            text-decoration: none;
+          }
+  
+          .footer__anchor:hover {
+            color: $lime-green;
+            transition: 2s ease-in;
+          }
+        }
+      }
+  
+      .footer__end {
+        .footer__end__descritpion {
+          color: $grayish-blue;
+          font-size: 0.8rem;
+        }
+  
+        .btn__footer {
+          margin: 2em 0;
+        }
+      }
+    }
+  }
+}

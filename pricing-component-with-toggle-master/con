@@ -1,0 +1,166 @@
+const url = `https://restcountries.eu/rest/v2/all`;
+const list = document.querySelector('.country-list');
+const modalContainer = document.querySelector('.modal-container');
+const form = document.querySelector('.form-search');
+const input = document.getElementById('search-bar');
+const filter = document.querySelector('.filter-list');
+const filterRegion = filter.querySelectorAll('li');
+const filterText = document.querySelector('.filter-text');
+const darkModeBtn = document.querySelector('.dark-mode');
+const header = document.querySelector('header');
+let countryArray = [];  // 1 ******  an array to hold the names of the countries
+let borderArray = [];  // 2 ****** use this to populate your border countries 
+let codeArray = []; //*** 3 ** an array to hold all the alpha3Code for all countries
+// DISPLAY COUNTRIES
+// fetch api
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+     data.forEach((country) => {
+        console.log(country.borders)
+        // *** POINT 4 *** create an array to hold all alpha3Code
+        codeArray.push(country.alpha3Code);
+        // *** END OF POINT 4 **** //
+        // *** POINT 5 ****  //create an array to hold all countries
+        countryArray.push(country.name);
+        // *** END OF POINT 5 ****//
+      //  create the card that contains the country information 
+       const card = document.createElement('div');
+       const closeModal = document.createElement('div');
+      //  give it a class of card
+       card.setAttribute ('class', 'card');
+      // create the html 
+       card.innerHTML = `
+        <img src="${country.flag}">
+        <h1 class="card-country-name">${country.name}</h1>
+        <div class="card-country-info">
+            <h3><span>Population: </span>${country.population}</h3>
+            <h3 class="country-region"><span>Region: </span>${country.region}</h3>
+            <h3><span>Country: </span>${country.capital}</h3>
+        </div>
+       `
+      // add card to list
+       list.appendChild(card)
+      // run function "moreInfo" to give more information about a country when a card is clicked
+      card.addEventListener('click', () => {
+        moreInfo(country);
+      }) 
+     })
+     });
+    //  COUNTRY DETAILS
+    function moreInfo(country) {
+        // open modal
+        modalContainer.style.display='block';
+      // create a container
+      const countryModal = document.createElement('div');
+      countryModal.setAttribute('class', 'country-modal');
+      // create btn to close the modal
+      const closeModal = document.createElement('div');
+      closeModal.setAttribute('class', 'close-modal-btn');
+      const closeModalIcon = document.createElement('i');
+      closeModalIcon.innerHTML = '<i class="fas fa-long-arrow-alt-left"></i>'
+      const closeModalText = document.createElement('p')
+      closeModalText.textContent = 'Back';
+      //   create container for borders
+      const countryBorders = document.createElement('div');
+      countryBorders.setAttribute('class', 'country-borders');
+      const countryBordersTitle = document.createElement('h2');
+      countryBordersTitle.setAttribute('class', 'country-borders-title');
+      countryBordersTitle.textContent = 'Border Countries:';
+      ///****POINT 6 - POPULATE THE BORDER COUNTRIES INTO AN ARRAY ******/
+      borderArray = [];
+					country.borders.map(cntry => {
+						console.log(cntry)
+						codeArray.forEach((elm, index) => {
+							if (cntry == elm) {
+								borderArray.push(countryArray[index]);
+								console.log(countryArray[index]);
+							}
+						})
+					});
+      ////****** */ END OF POINT 6 ******/ 
+    //   create borders btn
+      const bordersBtn = document.createElement('button');
+      bordersBtn.setAttribute('class', 'borders-btn');
+      // create the HTML 
+      countryModal.innerHTML = `
+        <div class="modal-img">
+            <img src="${country.flag}">
+        </div>
+            <h1 class="card-country-name">${country.name}</h1>
+        <div class="country-info-1">
+            <h3><span>Native Name: </span>${country.nativeName}</h3>
+            <h3><span>Population: </span>${country.population}</h3>
+            <h3><span>Region: </span>${country.region}</h3>
+            <h3><span>Sub Region: </span>${country.subregion}</h3>
+            <h3><span>Capital: </span>${country.capital}</h3>
+        </div>
+        <div class="country-info-2">
+            <h3><span>Top Level Domain: </span>${country.topLevelDomain}</h3>
+            <h3><span>Currencies: </span>${country.currencies.map((currency) => currency.code)}</h3>
+            <h3><span>Languages: </span>${country.languages.map((language) => ' ' + language.name)}</h3>
+            <ul>${borderArray.map(border =>`<li>${border}</li>`)}</ul>
+        </div>
+      `
+      // add countryModal to the container
+      modalContainer.appendChild(countryModal);
+    //   add btn to countryModal
+      countryModal.appendChild(closeModal);
+      closeModal.append(closeModalIcon);
+      closeModal.appendChild(closeModalText);
+    // add borders to countryModal
+      countryModal.appendChild(countryBorders);
+      countryBorders.appendChild(countryBordersTitle);
+    // add btn borders
+      countryBorders.appendChild(bordersBtn);
+    // add click event to closeModal
+      closeModal.addEventListener('click', closeModalBtn);
+    };
+    // add border btn to countryModal
+    const countryBorders = document.querySelector('.country-borders');
+    // close modal
+    function closeModalBtn(){
+        modalContainer.style.display='none';
+    }
+    // SEARCH FOR COUNTRY
+    input.addEventListener('input', e => {
+      const { value } = e.target;
+      const countryName = document.querySelectorAll('.card-country-name');
+      countryName.forEach(name => {
+          console.log(name)
+        if (name.innerText.toLowerCase().includes(value.toLowerCase())) {
+          name.parentElement.style.display = 'block';
+        } else {
+          name.parentElement.style.display = 'none';
+        }
+      });
+    });
+    // FILTER BY REGION
+    filterRegion.forEach(filter => {
+      filter.addEventListener('click', () => {
+        const value = filter.innerText;
+        console.log(filter.innerText);
+        const countryRegion = document.querySelectorAll('.country-region');
+        toggleFilter()
+        filterText.innerText = filter.innerText 
+        countryRegion.forEach(region => {
+          if (region.innerText.includes(value) || value === 'All') {
+            region.parentElement.parentElement.style.display = 'block';
+          } else {
+            region.parentElement.parentElement.style.display = 'none';
+          }
+        })
+      })
+    });
+    // open filter list
+    filter.style.display = 'none';
+    const openFilter = document.querySelector('.filter').addEventListener('click', toggleFilter);
+        function toggleFilter() {
+            if (filter.style.display === 'none'){
+                filter.style.display = 'block';
+            }else{
+                filter.style.display = 'none';
+            }
+    };
+    // DARK MODE  

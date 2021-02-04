@@ -1,0 +1,348 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 14px;
+    max-height: 100vh;
+}
+
+a {
+    color: black;
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover { color: hsl(0, 0%, 63%); }
+
+a img {  padding: 0 1.7rem; }
+a img:hover {
+    filter: grayscale(50%) invert(50%) contrast(500%) brightness(20%) saturate(20%) sepia(20%);
+}
+
+li {
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 .8rem;
+    padding-bottom: .2rem;
+    text-transform: lowercase;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1;
+    padding-bottom: 2rem;
+    padding: 0 6rem 2rem 0rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    padding: 0 1rem;
+    text-transform: uppercase;
+}
+
+.hamburger { display: none; }
+.img-logo { padding: 0 2rem 0 4.5rem; }
+
+.nav-links {
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    padding: 3rem 0;
+    position: absolute;
+    z-index: 99;
+}
+.nav__link { position: relative; }
+.nav__link:hover { position: relative; }
+
+.nav__link:hover::after {
+    position: absolute;
+    content: "";
+    width: 1.2rem;
+    height: 0.18rem;
+    left: 1.4rem;
+    top: 2rem;
+    background-color: #fff;
+}
+.text-container {
+    align-items: flex-start; 
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.text-container div { padding: 6rem 1rem; }
+.text-container div p { 
+    color: hsl(0, 0%, 63%);
+    line-height: 1.6;
+    padding: 0 1rem 2rem 0;
+    font-size: 13px;
+}
+
+.slide-active { display: grid; }
+
+.text-container.slide-active {
+  z-index: 80;
+  opacity: 1;
+  -webkit-transition: all 2.5s linear;
+  transition: all 2.5s linear;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.slide-img {
+    background-image: url(./images/desktop-image-hero-1.jpg);
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 900px;
+    transition: 1s ease;
+}
+
+.slide-img1 {
+    background-image: url(./images/desktop-image-hero-2.jpg);
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 900px;
+}
+.slide-img2 {
+    background-image: url(./images/desktop-image-hero-3.jpg);
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 900px;
+}
+
+.buttons { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; 
+    z-index: 99;
+}
+
+.btn {
+    background-color: black;
+    border: 2px solid black;
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    padding: 17px 19px;
+    outline: none;
+    top: 438px;
+    right: -840px;   
+}
+
+.btn:hover {
+    background-color: hsl(0, 0%, 27%);
+    border: 2px solid hsl(0, 0%, 27%);
+    transition: 1s linear;
+}
+
+
+.container-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.first {
+    background-image: url(./images/image-about-dark.jpg);
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+}
+
+.second {
+    padding: 4rem 2rem;
+    width: 550px;
+}
+
+.second p {
+    color: hsl(0, 0%, 63%);
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 1rem 2rem 2rem 1rem;
+}
+
+.third {
+    background-image: url(./images/image-about-light.jpg);
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+}
+
+.attribution a {
+    font-size: 13px;
+    text-transform: lowercase;
+}
+
+@media screen and (max-width: 550px) {
+
+    a {
+        padding: 0 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        line-height: 1;
+        padding-bottom: 2rem;
+        padding: 0 10rem 2rem 2rem;
+    }
+
+    .text-container, .container-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .text-container div p {
+        padding: 0 3rem 2rem 2rem;
+    }
+
+    .slide-img {
+        background-image: url(./images/desktop-image-hero-1.jpg);
+        background-repeat: no-repeat;
+        height: 500px;
+        width: 550px;
+    }
+    
+    .slide-img1 {
+        background-image: url(./images/desktop-image-hero-2.jpg);
+        background-repeat: no-repeat;
+        height: 500px;
+        width: 550px;
+    }
+    .slide-img2 {
+        background-image: url(./images/desktop-image-hero-3.jpg);
+        background-repeat: no-repeat;
+        height: 500px;
+        width: 550px;
+    }
+
+    .btn {
+        left: 440px;
+    }
+
+    /* .first {
+        background-image: url(./images/image-about-dark.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 400px;
+        width: 100%;
+    }
+
+    .third {
+        background-position: center;
+    } */
+
+}
+
+@media screen and (max-width: 376px) {
+    a {
+        padding: 0 1rem;
+    }
+
+    li {
+        color: #000;
+        display: inline-block;
+        font-weight: bold;
+        padding: 0 .1rem;
+        margin: 0 .7rem;
+        margin-top: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        line-height: 1;
+        padding-bottom: 2rem;
+        padding: 0 0rem 2rem 1rem;
+    }
+    .hamburger { display: flex; }
+    .img-logo {
+        position: relative;
+        left: 5.5rem;
+        top: 2px;
+    }
+
+    .btn-menu {
+        background-color: transparent;
+        background-image: url('./images/icon-hamburger.svg');
+        border: none;
+        cursor: pointer;
+        display: block;
+        margin-left: 2rem;
+        outline: none;
+        position: absolute;
+        top: 3.2rem;
+        width: 25px;
+        height: 14px;
+        z-index: 1000;
+    }
+
+    .showClose {
+        background-image: url('./images/icon-close.svg');
+        background-repeat: no-repeat;   
+    }
+   
+    .nav-bar {
+        align-items: center;
+        background-color: #fff;
+        background-image: 100%;
+        box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: flex-end;
+        height: 100px;
+        position: absolute;
+        transform: translateY(-100%);
+        transition: transform .6s ease-in-out;
+        top: 0px;
+        width: 375px;
+    }
+
+    .active {
+        transform: translateY(0%);
+    }
+
+    .text-container div p {
+        padding: 0 0rem 2rem 1rem;
+    }
+
+    .slide-img {
+        background-image: url(./images/mobile-image-hero-1.jpg);
+        background-repeat: no-repeat;
+        height: 370px;
+        width: 100%;
+    }
+    
+    .slide-img1 {
+        background-image: url(./images/mobile-image-hero-2.jpg);
+        background-repeat: no-repeat;
+        height: 370px;
+        width: 100%;
+    }
+
+    .slide-img2 {
+        background-image: url(./images/mobile-image-hero-3.jpg);
+        background-repeat: no-repeat;
+        height: 370px;
+        width: 100%;
+    }
+
+    .btn {
+        left: 263px;
+        top: 297px;
+    }
+
+    .first, .last {
+        height: 300px;
+    }
+
+    .second {
+        padding: 2rem 1rem;
+        width: 370px;
+    } 
+}
+
