@@ -38,7 +38,7 @@
             height: 4px;
             background: $gradient;
             position: absolute;
-            top: 2.4rem;
+            top: 2.5rem;
             left: 0;
             transition-delay: 4s;
           }
@@ -108,7 +108,7 @@
       }
 
       .header__hamburger {
-        background-image: url('.././images/icon-hamburger.svg');
+        background-image: url('../images/icon-hamburger.svg');
         background-size: 100%;
         background-color: transparent;
         background-repeat: no-repeat;
@@ -121,7 +121,7 @@
       }
 
       .showClose {
-        background-image: url('.././images/icon-close.svg');
+        background-image: url('../images/icon-close.svg');
         
       }
 
