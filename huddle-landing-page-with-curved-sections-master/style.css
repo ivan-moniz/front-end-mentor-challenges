@@ -371,6 +371,10 @@ input {
     margin: 2rem 1rem;
   }
 
+  .btn-pink {
+    padding: 14px 60px;
+  }
+
   .imgLogo > img {
     width: 55%;
   }
@@ -382,5 +386,11 @@ input {
   .container > p {
     padding: 1rem 2rem;
     font-size: 0.9rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
 }
