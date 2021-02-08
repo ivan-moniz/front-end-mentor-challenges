@@ -350,3 +350,28 @@ input {
   }
 
 }
+
+@media screen and (max-width: 376px) {
+  h1 {
+    padding: 0.2rem 2rem;
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  .top-showcase {
+    margin: 2rem 1rem;
+  }
+
+  .imgLogo > img {
+    width: 55%;
+  }
+
+  .container {
+    margin-top: 5rem;
+  }
+
+  .container > p {
+    padding: 1rem;
+  }
+  
+}
