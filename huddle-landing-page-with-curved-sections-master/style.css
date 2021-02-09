@@ -65,7 +65,7 @@ i {
 footer {
   background-color: hsl(192, 100%, 9%);
   width: 100%;
-  height: 300px;
+  height: 350px;
 }
 
 .top-showcase {
@@ -253,6 +253,8 @@ input {
   width: 300px;
   height: 40px;
   outline: none;
+  border-radius: 6px;
+  border: none;
 }
 
 .btn-submit {
@@ -266,7 +268,15 @@ input {
   cursor: pointer;
   outline: none;
   color: #fff;
-  border-radius: 3px;
+  border-radius: 6px;
+}
+
+.social-icons {
+  margin-top: 2rem;
+}
+
+.social-icons > .fab{
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -416,29 +426,28 @@ input {
 
   main .flex-1::after {
     top: 1280px;
-    background-image: url('./images/bg-section-top-mobile-1.svg');
+    background-image: url("./images/bg-section-top-mobile-1.svg");
   }
 
   main .flex-1::before {
     top: 1900px;
-    background-image: url('./images/bg-section-bottom-mobile-2.svg');
+    background-image: url("./images/bg-section-bottom-mobile-2.svg");
   }
 
   main .flex-3::after {
     top: 2550px;
-    background-image: url('./images/bg-section-top-mobile-2.svg');
+    background-image: url("./images/bg-section-top-mobile-2.svg");
   }
 
   main .flex-3::before {
     top: 3150px;
-    background-image: url('./images/bg-section-bottom-mobile-2.svg');
+    background-image: url("./images/bg-section-bottom-mobile-2.svg");
   }
 
   .footer::after {
     top: 3730px;
-    background-image: url('./images/bg-footer-top-mobile.svg');
+    background-image: url("./images/bg-footer-top-mobile.svg");
   }
-
 
   .flexContainer {
     flex-direction: column-reverse;
@@ -473,7 +482,7 @@ input {
     align-items: center;
     margin: 2rem 1rem;
   }
-  
+
   .flex-2 > div p {
     padding-top: 1rem;
   }
@@ -498,6 +507,6 @@ input {
 
   .btn-submit {
     margin-left: 11.1rem;
+    margin-top: .7rem;
   }
-  
 }
