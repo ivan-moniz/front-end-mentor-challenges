@@ -375,6 +375,10 @@ input {
     padding-top: 0px;
   }
 
+  footer {
+    height: 650px;
+  }
+
   .top-showcase {
     margin: 2rem 1rem;
   }
@@ -481,6 +485,19 @@ input {
   .flex-2 > div p {
     text-align: center;
     padding-left: 0rem;
+  }
+
+  .gridContainer {
+    margin: 2rem 2rem;
+  }
+
+  .gridContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .btn-submit {
+    margin-left: 11.1rem;
   }
   
 }
