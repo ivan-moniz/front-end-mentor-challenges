@@ -367,6 +367,14 @@ input {
     text-align: center;
   }
 
+  h2 {
+    font-size: 4rem;
+  }
+
+  small {
+    padding-top: 0px;
+  }
+
   .top-showcase {
     margin: 2rem 1rem;
   }
@@ -392,5 +400,13 @@ input {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+  }
+  .comunities {
+    margin-bottom: 5rem;
+  }
+
+  .comunities > img,
+  .messages > img {
+    margin-right: 9rem;
   }
 }
