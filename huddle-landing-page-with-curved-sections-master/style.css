@@ -409,4 +409,78 @@ input {
   .messages > img {
     margin-right: 9rem;
   }
+
+  main .flex-1::after {
+    top: 1280px;
+    background-image: url('./images/bg-section-top-mobile-1.svg');
+  }
+
+  main .flex-1::before {
+    top: 1900px;
+    background-image: url('./images/bg-section-bottom-mobile-2.svg');
+  }
+
+  main .flex-3::after {
+    top: 2550px;
+    background-image: url('./images/bg-section-top-mobile-2.svg');
+  }
+
+  main .flex-3::before {
+    top: 3150px;
+    background-image: url('./images/bg-section-bottom-mobile-2.svg');
+  }
+
+  .footer::after {
+    top: 3730px;
+    background-image: url('./images/bg-footer-top-mobile.svg');
+  }
+
+
+  .flexContainer {
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .textContainer {
+    margin: 50px 10px;
+  }
+
+  .textContainer > h3 {
+    font-size: 1.4rem;
+  }
+
+  .textContainer > p {
+    text-align: center;
+    padding-top: 1rem;
+    padding-right: 0rem;
+  }
+
+  .image > img {
+    margin-top: 3rem;
+  }
+
+  .flex-2 {
+    background-color: #fff;
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 2rem 1rem;
+  }
+  
+  .flex-2 > div p {
+    padding-top: 1rem;
+  }
+  .flex-2 > div h3 {
+    font-size: 1.4rem;
+    padding-top: 2rem;
+  }
+  .flex-2 > div h3,
+  .flex-2 > div p {
+    text-align: center;
+    padding-left: 0rem;
+  }
+  
 }
