@@ -196,7 +196,7 @@ footer {
   z-index: -1;
   width: 100%;
   height: 300px;
-  top: 3050px;
+  top: 3040px;
   background-repeat: no-repeat;
 }
 
@@ -509,4 +509,51 @@ input {
     margin-left: 11.1rem;
     margin-top: .7rem;
   }
+}
+
+@media screen and (max-width: 320px) {
+  footer {
+    height: 680px;
+  }
+  main .flex-1::before {
+    top: 1890px;
+    background-image: url("./images/bg-section-bottom-mobile-2.svg");
+  }
+
+  main .flex-3::after {
+    top: 2530px;
+    background-image: url("./images/bg-section-top-mobile-2.svg");
+  }
+
+  main .flex-3::before {
+    top: 3090px;
+    background-image: url("./images/bg-section-bottom-mobile-2.svg");
+  }
+
+  .footer::after {
+    top: 3665px;
+    background-image: url("./images/bg-footer-top-mobile.svg");
+  }
+
+  .gridContainer {
+    margin: 2rem 1.5rem;
+  }
+
+  .rightContainer > h4, .rightContainer > p {
+    padding-left: 1rem;
+  }
+
+  input {
+    width: 270px;
+    height: 40px;
+    outline: none;
+    border-radius: 6px;
+    border: none;
+    margin-left: 1rem;
+  }
+
+  .btn-submit {
+    margin-left: 10.4rem;
+  }
+
 }
