@@ -7,8 +7,9 @@ body {
   font-size: 15px;
   height: 100vh;
   margin: 2rem 0rem;
-  background-color: hsl(270, 20%, 96%);
+  background-color: hsl(270, 20%, 96%);  
 }
+
 h4,
 h1 {
   color: #fff;
@@ -25,7 +26,7 @@ span {
 }
 
 .curve-top {
-  background-image: linear-gradient(
+  background: linear-gradient(
     to top,
     hsl(264, 100%, 61%),
     hsl(293, 100%, 63%)
@@ -47,7 +48,7 @@ span {
     hsl(293, 100%, 63%)
   );
   background-repeat: no-repeat;
-  height: 500px;
+  height: 600px;
   width: 350px;
   position: absolute;
   z-index: 0;
@@ -66,10 +67,10 @@ span {
 }
 
 .chatBox {
-  width: 800px;
+  width: 900px;
   height: 650px;
-  margin-left: 10rem;
-  margin-right: 15rem;
+  margin-left: 15rem;
+  margin-right: 10rem;
   border-radius: 30px;
   border: 10px solid hsl(0, 0%, 100%);
   background-color: hsl(270, 20%, 96%);
