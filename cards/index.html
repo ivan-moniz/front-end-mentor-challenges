@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Card</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <img src="./images/drawers.jpg" alt="drawers" />
+        </div>
+        <div class="card-body">
+          <h4>
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home.
+          </h4>
+          <p>
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+          <div class="user">
+            <img src="./images/avatar-michelle.jpg" alt="profile_picture" />
+            <div class="user-info">
+              <h5>Michelle Appleton</h5>
+              <small>28 Jun 2020</small>
+            </div>
+            <span >
+              <img
+                src="./images/icon-share.svg"
+                alt="share-icon"
+                onclick="myFunction()"
+              />
+            </span>
+            <div class="icon-share" >
+              <span>Share</span>
+              <img src="./images/icon-facebook.svg" alt="facebook-icon" />
+              <img src="./images/icon-twitter.svg" alt="twitter-icon" />
+              <img src="./images/icon-pinterest.svg" alt="pinterest-icon" />
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script >
+        function myFunction() {
+            const shareIcons = document.querySelector('.icon-share');
+
+            if(shareIcons.style.display === 'none') {
+                shareIcons.style.display = 'flex';
+            } else {
+                shareIcons.style.display = 'none';
+            }
+        }
+    </script>
+  </body>
+</html>

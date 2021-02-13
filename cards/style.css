@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: hsl(210, 46%, 95%);
+}
+
+hr {
+  position: absolute;
+  background-color: transparent;
+  width: 0;
+  height: 0;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-top: 15px solid hsl(217, 19%, 35%);
+  top: 30px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  width: 740px;
+  overflow: hidden;
+}
+
+.card-header img {
+  object-fit: cover;
+  height: 100%;
+  width: 250px;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.card-body h4 {
+  font-size: 20px;
+  margin: 20px 40px;
+  padding-right: 50px;
+  line-height: 1;
+  color: hsl(217, 19%, 35%);
+}
+
+.card-body p {
+  font-size: 15px;
+  margin: 0 40px;
+  padding-bottom: 20px;
+  color: hsl(214, 17%, 51%);
+}
+
+.user {
+  display: flex;
+  margin-top: auto;
+  padding-right: 200px;
+}
+
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 40px;
+  margin-right: 15px;
+}
+.user-info {
+  padding-bottom: 20px;
+}
+
+.user-info h5 {
+  color: hsl(217, 19%, 35%);
+  margin: 0;
+}
+.user-info small {
+  color: hsl(212, 23%, 69%);
+}
+
+.user > span {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: hsl(210, 46%, 95%);
+  cursor: pointer;
+  position: relative;
+  left: 218px;
+  margin-top: 0.5rem;
+}
+
+.user > span > img {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: -7px;
+  top: 6px;
+}
+
+.user > span:hover {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.user > span > img:hover {
+  filter: grayscale(100%) brightness(30%) contrast(100%) saturate(60%)
+    invert(100%);
+}
+
+.icon-share {
+  background-color: hsl(217, 19%, 35%);
+  position: absolute;
+  display: none;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 190px;
+  padding: 10px 30px;
+  right: 270px;
+  top: 320px;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icon-share > span {
+  color: hsl(214, 17%, 51%);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.icon-share img {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    align-items: center;
+    justify-content: center;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .card {
+    width: 300px;
+    display: block;
+  }
+
+  .card-header img {
+    width: 100%;
+    height: 250px;
+  }
+  .card-body h4 {
+    padding-right: 0;
+    font-size: 16px;
+    margin: 20px 30px;
+  }
+  .card-body p {
+    margin: 0 30px;
+    font-size: 13px;
+  }
+  .user {
+    padding-right: 0;
+  }
+  .user img {
+    margin-left: 30px;
+  }
+
+  .user > span {
+    left: 50px;
+    top: 5px;
+    z-index: 1000;
+    background-color: hsl(214, 17%, 51%);
+  }
+  .user > span:hover {
+    background-color: hsl(214, 17%, 51%);
+  }
+
+  .icon-share {
+    right: 37px;
+    top: 530px;
+    width: 80%;
+    height: 60px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 10px 0px;
+    justify-content: flex-start;
+    padding: 0 30px;
+  }
+
+  .icon-share img {
+    margin: 0 5px;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+  .icon-share {
+    right: 10px;
+    top: 480px;
+    width: 94%;
+    height: 60px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 10px 0px;
+    justify-content: flex-start;
+    padding: 0 30px;
+  }
+}
