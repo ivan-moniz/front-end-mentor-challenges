@@ -88,7 +88,7 @@ body {
   padding: 5rem;
 }
 
-.container__heading {
+.container__heading, .creation__heading  {
   font-size: 3rem;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: normal;
@@ -99,4 +99,27 @@ body {
   font-family: 'Alata';
   padding: 1.5rem 0;
   opacity: 0.5;
+}
+
+.creation {
+  margin: 0 8rem;
+}
+
+.creation__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.creation__flex .btn {
+  background: #fff;
+  border: 2px solid black;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'Alata', sans-serif;
+  outline: none;
+  padding: 8px 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
