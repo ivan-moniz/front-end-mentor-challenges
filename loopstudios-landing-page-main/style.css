@@ -149,7 +149,7 @@ body {
   position: absolute;
   width: 19%;
   height: 450px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
   transform: translate(-2rem, 2rem);
 }
 
@@ -204,8 +204,17 @@ body {
 .grid__heading {
   color: #fff;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: normal;
   position: relative;
   z-index: 2;
+}
+
+.footer {
+  background: rgba(0, 0, 0, 1);
+  height: 150px;
+}
+
+.footer__navigation {
+  margin: 4rem 8rem;
 }
