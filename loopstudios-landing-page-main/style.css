@@ -122,4 +122,78 @@ body {
   padding: 8px 40px;
   text-transform: uppercase;
   letter-spacing: 3px;
+  transition: 2s ease-in;
+}
+
+.creation__flex .btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.creation .creation__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 6rem 0;
+}
+
+.creation__grid .grid__box {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 450px;
+}
+
+.creation__grid .box-1 {
+  background-image: url('./images/desktop/image-deep-earth.jpg');
+  background-repeat: no-repeat;
+  padding: 2rem;
+}
+.creation__grid .box-2 {
+  background-image: url('./images/desktop/image-night-arcade.jpg');
+  background-repeat: no-repeat;
+  padding: 2rem;
+}
+
+.creation__grid .box-3 {
+  background-image: url('./images/desktop/image-soccer-team.jpg');
+  background-repeat: no-repeat;
+  padding: 2rem;
+}
+
+.creation__grid .box-4 {
+  background-image: url('./images/desktop/image-grid.jpg');
+  background-repeat: no-repeat;
+  padding: 2rem;
+  
+}
+
+.creation__grid .box-5 {
+  background-image: url('./images/desktop/image-from-above.jpg');
+  background-repeat: no-repeat;
+  padding: 2rem;
+  
+}
+
+.creation__grid .box-6 {
+  background-image: url('./images/desktop/image-pocket-borealis.jpg');
+  background-repeat: no-repeat;
+  padding: 2rem;
+}
+
+.creation__grid .box-7 {
+  background-image: url('./images/desktop/image-curiosity.jpg');
+  background-repeat: no-repeat;
+  padding: 2rem;
+}
+
+.creation__grid .box-8 {
+  background-image: url('./images/desktop/image-fisheye.jpg');
+  background-repeat: no-repeat;
+  padding: 2rem;
+}
+.grid__heading {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2rem;
 }
