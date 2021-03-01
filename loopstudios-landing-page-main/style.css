@@ -12,7 +12,9 @@ body {
 }
 
 small {
-  color: #fff;
+  color: hsl(0, 0%, 55%);
+  font-family: 'Alata', sans-serif;
+  text-align: right;
 }
 
 .navigation {
@@ -240,10 +242,14 @@ small {
 }
 
 .footer__copy {
-  margin-right: 4rem;
+  margin-right: 8rem;
 }
-
 
 .footer__images {
   padding-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer__images > img {
+  padding-left: 1rem;
 }
