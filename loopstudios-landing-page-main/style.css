@@ -217,4 +217,16 @@ body {
 
 .footer__navigation {
   margin: 4rem 8rem;
+  padding-top: 2rem;
+}
+
+.footer__link {
+  display: inline-block;
+  padding: 1rem 2rem 1rem 0rem;
+}
+
+.footer__anchor {
+  color: #fff;
+  font-family: 'Alata', sans-serif;
+  text-decoration: none;
 }
