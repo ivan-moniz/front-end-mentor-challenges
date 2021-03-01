@@ -11,6 +11,10 @@ body {
   font-family: 'Josefin Sans' , sans-serif; 
 }
 
+small {
+  color: #fff;
+}
+
 .navigation {
   background-image: url("./images/desktop/image-hero.jpg");
   background-repeat: no-repeat;
@@ -213,11 +217,15 @@ body {
 .footer {
   background: rgba(0, 0, 0, 1);
   height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer__navigation {
   margin: 4rem 8rem;
   padding-top: 2rem;
+  
 }
 
 .footer__link {
@@ -229,4 +237,13 @@ body {
   color: #fff;
   font-family: 'Alata', sans-serif;
   text-decoration: none;
+}
+
+.footer__copy {
+  margin-right: 4rem;
+}
+
+
+.footer__images {
+  padding-bottom: 1rem;
 }
