@@ -246,7 +246,7 @@ small {
 }
 
 .footer__images {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   display: flex;
   justify-content: flex-end;
 }
