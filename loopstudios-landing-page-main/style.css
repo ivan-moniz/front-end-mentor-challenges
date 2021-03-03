@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
 
 * {
   margin: 0;
@@ -8,12 +8,12 @@
 
 body {
   font-size: 15px;
-  font-family: 'Josefin Sans' , sans-serif; 
+  font-family: "Josefin Sans", sans-serif;
 }
 
 small {
   color: hsl(0, 0%, 55%);
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   text-align: right;
 }
 
@@ -53,12 +53,28 @@ small {
   list-style-type: none;
   display: inline-block;
   padding: 0 0.5rem;
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
 }
 
 .anchor__link {
   color: #fff;
   text-decoration: none;
+}
+
+.anchor__link:hover, .footer__anchor {
+  position: relative;
+}
+
+.anchor__link:hover::after, .footer__anchor:hover::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  left: 0.62em;
+  top: 2rem;
+  background-color: #fff;
+  transition-delay: 4s;
+  text-align: center;
 }
 
 .heading {
@@ -94,15 +110,16 @@ small {
   padding: 5rem;
 }
 
-.container__heading, .creation__heading  {
+.container__heading,
+.creation__heading {
   font-size: 3rem;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
 }
 
 .container__description {
-  font-family: 'Alata';
+  font-family: "Alata";
   padding: 1.5rem 0;
   opacity: 0.5;
 }
@@ -115,7 +132,6 @@ small {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .creation__flex .btn {
@@ -123,7 +139,7 @@ small {
   border: 2px solid black;
   border-radius: 3px;
   cursor: pointer;
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   outline: none;
   padding: 8px 40px;
   text-transform: uppercase;
@@ -148,72 +164,84 @@ small {
   align-items: flex-end;
   justify-content: flex-start;
   height: 450px;
+  cursor: pointer;
+  color: #fff;
 }
 
-.grid__box::after {
+.grid__box {
+  box-shadow: inset 255px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.grid__box:hover {
+  position: relative;
+  color: #000;
+}
+
+.grid__box:hover::before {
   content: '';
   position: absolute;
-  width: 19%;
+  z-index: 0;
+  transition: 2s ease-in;
+  width: 98%;
   height: 450px;
-  background: rgba(0, 0, 0, 0.2);
+  background: hsl(0, 0%, 55%);
+  opacity: .7;
   transform: translate(-2rem, 2rem);
 }
 
 .creation__grid .box-1 {
-  background-image: url('./images/desktop/image-deep-earth.jpg');
+  background-image: url("./images/desktop/image-deep-earth.jpg");
   background-repeat: no-repeat;
   padding: 2rem;
 }
 .creation__grid .box-2 {
-  background-image: url('./images/desktop/image-night-arcade.jpg');
+  background-image: url("./images/desktop/image-night-arcade.jpg");
   background-repeat: no-repeat;
   padding: 2rem;
 }
 
 .creation__grid .box-3 {
-  background-image: url('./images/desktop/image-soccer-team.jpg');
+  background-image: url("./images/desktop/image-soccer-team.jpg");
   background-repeat: no-repeat;
   padding: 2rem;
 }
 
 .creation__grid .box-4 {
-  background-image: url('./images/desktop/image-grid.jpg');
+  background-image: url("./images/desktop/image-grid.jpg");
   background-repeat: no-repeat;
   padding: 2rem;
-  
 }
 
 .creation__grid .box-5 {
-  background-image: url('./images/desktop/image-from-above.jpg');
+  background-image: url("./images/desktop/image-from-above.jpg");
   background-repeat: no-repeat;
   padding: 2rem;
-  
 }
 
 .creation__grid .box-6 {
-  background-image: url('./images/desktop/image-pocket-borealis.jpg');
+  background-image: url("./images/desktop/image-pocket-borealis.jpg");
   background-repeat: no-repeat;
   padding: 2rem;
 }
 
 .creation__grid .box-7 {
-  background-image: url('./images/desktop/image-curiosity.jpg');
+  background-image: url("./images/desktop/image-curiosity.jpg");
   background-repeat: no-repeat;
   padding: 2rem;
 }
 
 .creation__grid .box-8 {
-  background-image: url('./images/desktop/image-fisheye.jpg');
+  background-image: url("./images/desktop/image-fisheye.jpg");
   background-repeat: no-repeat;
   padding: 2rem;
 }
+
 .grid__heading {
-  color: #fff;
   text-transform: uppercase;
   font-size: 2.2rem;
   font-weight: normal;
   position: relative;
-  z-index: 2;
+  z-index: 100;
 }
 
 .footer {
@@ -227,7 +255,6 @@ small {
 .footer__navigation {
   margin: 4rem 8rem;
   padding-top: 2rem;
-  
 }
 
 .footer__link {
@@ -237,7 +264,7 @@ small {
 
 .footer__anchor {
   color: #fff;
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   text-decoration: none;
 }
 
