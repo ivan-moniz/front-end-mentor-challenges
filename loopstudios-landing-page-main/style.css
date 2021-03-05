@@ -100,6 +100,9 @@ small {
 
 .container__image {
   position: relative;
+  background-image: url('./images/desktop/image-interactive.jpg');
+  background-repeat: no-repeat;
+  height: 600px;
 }
 
 .container__text {
@@ -298,4 +301,50 @@ small {
   background-color: #fff;
   transition-delay: 4s;
   text-align: center;
+}
+
+@media only screen and (max-width: 376px) {
+  .navigation {
+    background-image: url('./images/mobile/image-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .heading {
+    margin: 6rem 2rem;
+    width: 310px;
+  }
+
+  .header__navigation {
+    margin: 2rem;
+  }
+
+  .heading__title {
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+
+  .header__links {
+    padding-left: 0rem;
+    display: none;
+  }
+
+  .container {
+    margin: 5rem 1.6rem;
+  }
+
+  .container__image {
+    background-image: url('./images/mobile/image-interactive.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x:center ;
+    height: 600px;
+    width: 320px;
+  }
+
+  .container__text {
+    top: 60rem;
+    width: 320px;
+  }
+ 
 }
