@@ -343,8 +343,19 @@ small {
   }
 
   .container__text {
-    top: 60rem;
-    width: 320px;
+    top: 57rem;
+    z-index: -1;
+    width: 400px;
+    text-align: center;
+    right: -.5rem;
+  }
+
+  .container__heading {
+    font-size: 1.5rem;
+    text-align: center;
+    padding:0;
+   
+    
   }
  
 }
