@@ -310,16 +310,27 @@ small {
   .navigation {
     background-image: url("./images/mobile/image-hero.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    height: 650px;
+    width: 100%;
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.25);
+    min-height: 100%;
+  }
+
+  .header__logo {
+    width: 50%;
   }
 
   .heading {
-    margin: 6rem 2rem;
+    margin: 8rem 2rem;
     width: 310px;
   }
 
   .header__navigation {
-    margin: 2rem;
+    margin: 4rem 2rem;
   }
 
   .heading__title {
@@ -354,7 +365,7 @@ small {
   }
 
   .container__heading {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-align: center;
     padding: 0;
   }
