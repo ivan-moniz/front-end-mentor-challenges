@@ -56,6 +56,18 @@ small {
   font-family: "Alata", sans-serif;
 }
 
+.header__menu {
+  background-image: url('./images/icon-hamburger.svg');
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.show__close {
+  background-image: url('./images/icon-close.svg');
+}
+
 .anchor__link {
   color: #fff;
   text-decoration: none;
@@ -324,6 +336,10 @@ small {
     width: 50%;
   }
 
+  .header__menu {
+    display: block;
+  }
+
   .heading {
     margin: 8rem 2rem;
     width: 310px;
@@ -400,7 +416,7 @@ small {
 
   .creation__flex .btn {
     position: absolute;
-    bottom: -114rem; 
+    bottom: -127rem; 
   }
 
   .grid__box {
@@ -415,9 +431,9 @@ small {
   }
 
   .grid__box:hover::before {
-    height: 120px;
+    height: 115px;
     width: 100%;
-    transform: translate(-7rem, -3.74rem);
+    transform: translate(0rem, -3.60rem);
   }
 
   .creation__grid .box-1 {
