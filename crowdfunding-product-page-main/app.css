@@ -24,6 +24,12 @@ main {
   justify-content: center;
 }
 
+small {
+  font-size: 13px;
+  font-weight: normal;
+  opacity: 0.5;
+}
+
 .header {
   background-image: url("./images/image-hero-desktop.jpg");
   background-repeat: no-repeat;
@@ -86,7 +92,7 @@ main {
 }
 
 .card__description {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .card__buttons {
@@ -111,13 +117,12 @@ main {
 }
 
 .btn__bookmark {
-  background-image: url('./images/icon-bookmark.svg');
+  background-image: url("./images/icon-bookmark.svg");
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.1);
   background-position: left;
   color: var(--background-color);
   object-fit: cover;
-
 }
 
 .btn__bookmark > span {
@@ -137,19 +142,21 @@ main {
   align-items: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: center; 
+  justify-content: center;
 }
 
 .donation__description {
   font-size: 14px;
-  opacity: .5;
+  opacity: 0.5;
 }
 
-.donation__money, .donation__total {
+.donation__money,
+.donation__total {
   border-right: 1px solid #eee;
 }
 
-.donation__total, .donation__day {
+.donation__total,
+.donation__day {
   padding: 0 2rem;
 }
 
@@ -162,10 +169,87 @@ main {
 }
 
 .donation__bar::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 33%;
   height: 10px;
   background-color: var(--moderate-cyan);
   border-radius: 10px;
+}
+
+.about__card {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 24.5em 0;
+  padding: 2rem 4rem;
+  height: 1100px;
+  width: 680px;
+}
+
+.about__heading {
+  font-size: 16px;
+  padding: 2rem 0;
+}
+
+.about__description__one,
+.about__description__two {
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.5;
+}
+
+.about__description__two {
+  padding: 2rem 0;
+}
+
+.card__bamboo {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 1rem 0;
+  padding: 2rem;
+
+}
+
+.card__top,
+.card__bottom {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top__heading {
+  font-size: 16px;
+}
+
+.top__descritpion {
+  color: var(--moderate-cyan);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.bamboo__description {
+  font-size: 13px;
+  line-height: 1.8;
+  padding: 1.3rem 0;
+  opacity: 0.5;
+}
+
+.bottom__button {
+  background-color: var(--moderate-cyan);
+  border: none;
+  border-radius: 35px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  padding: 12px 30px;
+}
+
+.faded {
+  opacity: .5;
+}
+
+.faded .bottom__button {
+  background-color: var(--background-color);
 }
