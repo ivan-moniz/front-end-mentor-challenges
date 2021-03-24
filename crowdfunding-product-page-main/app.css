@@ -263,6 +263,11 @@ a {
   padding: 12px 30px;
 }
 
+.select:hover {
+  background-color: var(--dark-cyan);
+  transition: 2s ease-in;
+}
+
 .faded {
   opacity: .5;
 }
