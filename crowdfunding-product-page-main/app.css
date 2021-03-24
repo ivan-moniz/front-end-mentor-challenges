@@ -33,6 +33,10 @@ small {
   opacity: 0.5;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   background-image: url("./images/image-hero-desktop.jpg");
   background-repeat: no-repeat;
@@ -119,6 +123,11 @@ small {
   color: #fff;
 }
 
+.btn__support:hover {
+  background-color: var(--dark-cyan);
+  transition: 2s ease-in;
+}
+
 .btn__bookmark {
   background-image: url("./images/icon-bookmark.svg");
   background-repeat: no-repeat;
@@ -186,7 +195,7 @@ small {
   border-radius: 10px;
   margin: 24.5em 0;
   padding: 2rem 4rem;
-  height: 1100px;
+  height: 1080px;
   width: 680px;
 }
 
@@ -219,6 +228,11 @@ small {
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+.card__top > a:hover {
+  color: var(--dark-cyan);
+  transition: 2s ease-in;
 }
 
 .top__heading {
