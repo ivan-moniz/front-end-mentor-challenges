@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
 
 /*  NORMALIZING THE ELEMENTS */
 *,
@@ -19,7 +19,7 @@
 body {
   background-color: #f5f5f5;
   font-size: 16px;
-  font-family: 'Commissioner', sans-serif;
+  font-family: "Commissioner", sans-serif;
 }
 
 main {
@@ -37,11 +37,16 @@ a {
   text-decoration: none;
 }
 
+input {
+  border-radius: 50%;
+  border: 1px solid hsl(176, 50%, 47%);
+}
+
 .header {
   background-image: url("./images/image-hero-desktop.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-  /* box-shadow: inset 0px 50px 0 rgba(0, 0, 0, 0.5); */
+  /*! box-shadow: inset 0px 50px 0 rgba(0, 0, 0, 0.5); */
   height: 65vh;
   position: relative;
   padding: 2rem 10rem;
@@ -74,7 +79,8 @@ a {
 
 .anchor__link {
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0 0.6rem;
+  font-size: 14px;
 }
 
 .master__card {
@@ -95,11 +101,14 @@ a {
 
 .card__heading {
   font-size: 1.4rem;
+  font-weight: 700;
   padding: 3rem 1rem 0.5rem 1rem;
 }
 
 .card__description {
+  font-size: 15px;
   opacity: 0.5;
+  padding-top: 0.5rem;
 }
 
 .card__buttons {
@@ -144,7 +153,7 @@ a {
 .donation__card {
   background-color: #fff;
   border-radius: 10px;
-  margin: 10.5em 0;
+  margin: 9em 0;
   padding: 2rem 4rem;
   height: 200px;
   width: 680px;
@@ -193,7 +202,8 @@ a {
   position: absolute;
   background-color: #fff;
   border-radius: 10px;
-  margin: 24.5em 0;
+  margin: 23em 0;
+  padding-bottom: 30rem;
   padding: 2rem 4rem;
   height: 1080px;
   width: 680px;
@@ -220,7 +230,6 @@ a {
   border-radius: 10px;
   margin: 1rem 0;
   padding: 2rem;
-
 }
 
 .card__top,
@@ -269,9 +278,100 @@ a {
 }
 
 .faded {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .faded .bottom__button {
   background-color: var(--background-color);
+}
+
+/* modal styling  */
+.modal__container {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 140vh;
+  width: 99vw;
+  top: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 2rem;
+  width: 600px;
+  height: 740px;
+  margin-top: 8rem;
+  border-radius: 10px;
+}
+
+.modal__top {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__body {
+  padding-top: 0.3em;
+}
+
+.modal__heading {
+  font-size: 18px;
+}
+
+.modal__description {
+  font-size: 13px;
+  opacity: 0.6;
+  padding: 0.8em 0;
+}
+
+.modal__close {
+  background-image: url("./images/icon-close-modal.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+.modal__pledge {
+  border: 1px solid #f5f5f5;
+  border-radius: 10px;
+  padding: 1em 1em 2em 2em;
+  margin: 1em 0;
+}
+
+.pledge__flex {
+  padding-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pledge__heading {
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0 1.5em;
+}
+
+.pledge__heading:hover {
+  color: var(--moderate-cyan);
+}
+
+.pledge__description {
+  font-size: 12px;
+  opacity: 0.6;
+  padding: 1em 1em 0em 3em;
+  line-height: 1.6;
+}
+
+.pledge__money {
+  color: var(--moderate-cyan);
+  font-size: 13px;
+  font-style: normal;
+}
+
+.pledge__list {
+  display: flex;
 }
