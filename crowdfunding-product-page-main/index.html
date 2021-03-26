@@ -13,6 +13,11 @@
     />
     <link rel="stylesheet" href="app.css" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
     <title>Frontend Mentor | Crowdfunding product page</title>
   </head>
   <body>
@@ -21,15 +26,17 @@
         <img src="./images/logo.svg" alt="Crowdfunding logo" />
         <nav class="links">
           <ul class="header__links">
-            <a href="#" class="anchor__link">
-              <li class="header__link">About</li>
-            </a>
-            <a href="#" class="anchor__link">
-              <li class="header__link">Discover</li>
-            </a>
-            <a href="#" class="anchor__link">
-              <li class="header__link">Get Started</li>
-            </a>
+            <li class="header__link">
+              <a href="#" class="anchor__link"> About </a>
+            </li>
+
+            <li class="header__link">
+              <a href="#" class="anchor__link"> Discover </a>
+            </li>
+
+            <li class="header__link">
+              <a href="#" class="anchor__link"> Get Started </a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -155,7 +162,7 @@
           <div class="modal__pledge">
             <div class="pledge__flex">
               <ul class="pledge__list">
-                <i class="fa fa-circle-thin select"></i>
+                <i class="far fa-circle selected"></i>
                 <h2 class="pledge__heading">Pledge with no reward</h2>
               </ul>
             </div>
@@ -169,7 +176,7 @@
           <div class="modal__pledge">
             <div class="pledge__flex">
               <ul class="pledge__list">
-                <i class="fa fa-circle-thin select"></i>
+                <i class="far fa-circle selected"></i>
                 <h2 class="pledge__heading">Bamboo Stand</h2>
                 <i class="pledge__money">Pledge $25 or more</i>
               </ul>
@@ -185,7 +192,7 @@
           <div class="modal__pledge">
             <div class="pledge__flex">
               <ul class="pledge__list">
-                <i class="fa fa-circle-thin select"></i>
+                <i class="far fa-circle selected"></i>
                 <h2 class="pledge__heading">Black Edition Stand</h2>
                 <i class="pledge__money">Pledge $75 or more</i>
               </ul>
@@ -201,7 +208,7 @@
           <div class="modal__pledge faded">
             <div class="pledge__flex">
               <ul class="pledge__list">
-                <i class="fa fa-circle-thin select"></i>
+                <i class="far fa-circle select"></i>
                 <h2 class="pledge__heading">Mahogany Special Edition</h2>
                 <i class="pledge__money">Pledge $200 or more</i>
               </ul>
