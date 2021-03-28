@@ -291,7 +291,7 @@ a {
   width: 98.9vw;
   top: 0;
   position: absolute;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 
