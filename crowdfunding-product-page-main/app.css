@@ -279,7 +279,7 @@ a {
   background-color: var(--background-color);
 }
 
-.select:hover  {
+.select:hover {
   background-color: var(--dark-cyan);
   transition: 2s ease-out;
 }
@@ -291,9 +291,18 @@ a {
   width: 98.9vw;
   top: 0;
   position: absolute;
-  display: none;
+  display: flex;
   justify-content: center;
-  transition: 2s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  
+}
+
+.modal__container.show {
+  pointer-events: auto;
+  opacity: 1;
+  
 }
 
 .modal {

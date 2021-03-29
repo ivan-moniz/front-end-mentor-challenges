@@ -3,23 +3,23 @@ const openModal = document.getElementById("open__modal");
 const closeModal = document.getElementById("close__modal");
 const bookmark = document.getElementById("bookmarked");
 let spanMark = document.getElementById("bookmark");
+let isBoolean;
 
 openModal.addEventListener("click", () => {
-  if (modal.style.display == "none") {
-    modal.style.display = "flex";
-  } else {
-    modal.style.display = "none";
-  }
+  modal.classList.add('show');
 });
 
 closeModal.addEventListener("click", () => {
-  if (modal.style.display == "flex") {
-    modal.style.display = "none";
-  } else {
-    modal.style.display = "flex";
-  }
+  modal.classList.remove('show');
 });
 
 bookmark.addEventListener("click", () => {
-  spanMark.innerText("Bookmarked");
+  if(spanMark.innerHTML === 'Bookmark') {
+    // isBoolean = true;
+    spanMark.innerHTML = '<span>Bookmarked</span>';
+  } else {
+    // isBoolean = false;
+    spanMark.innerHTML = '<span>Bookmark</span>'
+  }
+ 
 });
