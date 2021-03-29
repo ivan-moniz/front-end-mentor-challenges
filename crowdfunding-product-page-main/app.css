@@ -293,6 +293,7 @@ a {
   position: absolute;
   display: none;
   justify-content: center;
+  transition: 2s ease-in-out;
 }
 
 .modal {
