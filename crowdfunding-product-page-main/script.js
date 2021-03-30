@@ -15,10 +15,10 @@ closeModal.addEventListener("click", () => {
 
 bookmark.addEventListener("click", () => {
   if(spanMark.innerHTML === 'Bookmark') {
-    // isBoolean = true;
+   
     spanMark.innerHTML = '<span>Bookmarked</span>';
   } else {
-    // isBoolean = false;
+    
     spanMark.innerHTML = '<span>Bookmark</span>'
   }
  
