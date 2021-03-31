@@ -18,7 +18,6 @@ bookmark.addEventListener("click", () => {
    
     spanMark.innerHTML = '<span>Bookmarked</span>';
   } else {
-    
     spanMark.innerHTML = '<span>Bookmark</span>'
   }
  
