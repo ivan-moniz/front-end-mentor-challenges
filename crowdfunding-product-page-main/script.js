@@ -3,7 +3,6 @@ const openModal = document.getElementById("open__modal");
 const closeModal = document.getElementById("close__modal");
 const bookmark = document.getElementById("bookmarked");
 let spanMark = document.getElementById("bookmark");
-let isBoolean;
 
 openModal.addEventListener("click", () => {
   modal.classList.add('show');
