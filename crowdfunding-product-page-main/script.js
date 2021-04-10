@@ -1,8 +1,8 @@
 const modal = document.querySelector(".modal__container");
-const openModal = document.getElementById("open__modal");
+const openModal = document.querySelector(".select");
 const closeModal = document.getElementById("close__modal");
-const bookmark = document.getElementById("bookmarked");
 let spanMark = document.getElementById("bookmark");
+let clicked = false;
 
 openModal.addEventListener("click", () => {
   modal.classList.add('show');
@@ -13,9 +13,11 @@ closeModal.addEventListener("click", () => {
 });
 
 bookmark.addEventListener("click", () => {
-  if(spanMark.innerHTML === 'Bookmark') {
+  if(!clicked) {
+    clicked = true;
     spanMark.innerHTML = '<span>Bookmarked</span>';
   } else {
+    clicked = false;
     spanMark.innerHTML = '<span>Bookmark</span>'
   }
  
