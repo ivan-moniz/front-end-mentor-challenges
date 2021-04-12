@@ -287,7 +287,7 @@ a {
 /* modal styling  */
 .modal__container {
   background-color: rgba(0, 0, 0, 0.3);
-  height: 140vh;
+  height: 145vh;
   width: 98.9vw;
   top: 0;
   position: absolute;
@@ -309,7 +309,7 @@ a {
   background-color: #fff;
   padding: 2rem;
   width: 600px;
-  height: 740px;
+  height: 780px;
   margin-top: 10rem;
   border-radius: 10px;
 }
@@ -347,12 +347,28 @@ a {
 .modal__pledge {
   border: 1px solid #f5f5f5;
   border-radius: 10px;
-  padding: 1em 1em 2em 2em;
+  padding: 1em 0em 2em 0em;
   margin: 1em 0;
 }
 
+i.fa-circle {
+  color: #f5f5f5;
+  font-size: 25px;
+  font-weight: 400;
+}
+i.fa-dot-circle {
+  font-size: 25px;
+  font-weight: 400;
+  border: 1px solid #f5f5f5;
+  display: none;
+}
+
+i.fa-circle:hover {
+  color: var(--moderate-cyan);
+}
+
 .pledge__flex {
-  padding-top: 0.5em;
+  padding: 0.5em 1.6em 0em 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -362,10 +378,6 @@ a {
   cursor: pointer;
   font-size: 13px;
   padding: 0 1.5em;
-}
-
-.pledge__heading:hover {
-  color: var(--moderate-cyan);
 }
 
 .pledge__description {
@@ -383,9 +395,25 @@ a {
 
 .pledge__list {
   display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-.far {
+.pledge__list:hover {
   color: var(--moderate-cyan);
-  font-weight: normal;
 }
+
+.pledge__bottom {
+  border-top: 1px solid #f5f5f5;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.pledge__title {
+  font-size: .8rem;
+  color: rgba(0, 0, 0, 0.3);
+}
+
