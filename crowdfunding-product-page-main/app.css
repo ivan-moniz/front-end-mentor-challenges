@@ -296,13 +296,11 @@ a {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s;
-  
 }
 
 .modal__container.show {
   pointer-events: auto;
   opacity: 1;
-  
 }
 
 .modal {
@@ -356,6 +354,7 @@ i.fa-circle {
   font-size: 25px;
   font-weight: 400;
 }
+
 i.fa-dot-circle {
   font-size: 25px;
   font-weight: 400;
@@ -374,6 +373,10 @@ i.fa-circle:hover {
   align-items: center;
 }
 
+.pledge__flex > span {
+  font-weight: bold;
+}
+
 .pledge__heading {
   cursor: pointer;
   font-size: 13px;
@@ -383,7 +386,7 @@ i.fa-circle:hover {
 .pledge__description {
   font-size: 12px;
   opacity: 0.6;
-  padding: 1em 1em 0em 3em;
+  padding: 1em 1.8em 0em 3em;
   line-height: 1.6;
 }
 
@@ -391,6 +394,7 @@ i.fa-circle:hover {
   color: var(--moderate-cyan);
   font-size: 13px;
   font-style: normal;
+  font-weight: bold;
 }
 
 .pledge__list {
@@ -406,14 +410,39 @@ i.fa-circle:hover {
 .pledge__bottom {
   border-top: 1px solid #f5f5f5;
   margin-top: 1rem;
-  padding-top: 1rem;
-  display: flex;
+  padding: 1em 2em 0em 2em;
+  display: none;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
+.pledge__form > input {
+  width: 70px;
+  height: 40px;
+  padding: 1em;
+  outline: none;
+  border-radius: 20px;
+  border: 1px solid #f5f5f5;
+  cursor: pointer;
+  margin-right: 0.6em;
+}
+
+.pledge__form .pledge__button {
+  width: 90px;
+  height: 40px;
+  background-color: var(--dark-cyan);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid var(--dark-cyan);
+  font-weight: bold;
+}
+
+.pledge__form > input:hover {
+  border: 1px solid var(--moderate-cyan);
 }
 
 .pledge__title {
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.3);
 }
-
