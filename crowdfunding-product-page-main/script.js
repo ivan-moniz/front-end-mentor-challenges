@@ -13,10 +13,6 @@ let path = document.getElementById("path");
 // variables selection
 let clicked = false;
 
-const check = 'far fa-dot-circle';
-// const unchek =  'far fa-circle';
-
-
 // open modal code
 openModal.forEach( button => {
   button.addEventListener('click' , () => {
