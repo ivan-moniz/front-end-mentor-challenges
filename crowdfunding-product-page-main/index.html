@@ -182,7 +182,7 @@
           <div class="modal__pledge">
             <div class="pledge__flex">
               <ul class="pledge__list">
-                <i class="far fa-circle selection"></i>
+                <i class="far fa-circle selection" onclick="myFunction(this)"></i>
                 <h2 class="pledge__heading">Bamboo Stand</h2>
                 <i class="pledge__money">Pledge $25 or more</i>
               </ul>
@@ -208,8 +208,8 @@
           <div class="modal__pledge">
             <div class="pledge__flex">
               <ul class="pledge__list">
-                <i class="far fa-circle selection"></i>
-                <i class="far fa-dot-circle"></i>
+                <i class="far fa-circle selection" onclick="myFunction(this)"></i>
+                <!-- <i class="far fa-dot-circle"></i>  -->
                 <h2 class="pledge__heading">Black Edition Stand</h2>
                 <i class="pledge__money">Pledge $75 or more</i>
               </ul>
@@ -269,4 +269,9 @@
     <!-- Success modal end -->
   </body>
   <script src="./script.js"></script>
+  <script>
+    function myFunction(x) {
+      x.classList.toggle('fa-dot-circle');
+    }
+  </script>
 </html>

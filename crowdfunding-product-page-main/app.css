@@ -357,12 +357,12 @@ i.fa-circle {
   font-weight: 400;
 }
 
-i.fa-dot-circle {
+/* i.fa-dot-circle {
   font-size: 25px;
   font-weight: 400;
   border: 1px solid #f5f5f5;
-  display: none;
-}
+  display: flex;
+} */
 
 i.fa-circle:hover {
   color: var(--moderate-cyan);

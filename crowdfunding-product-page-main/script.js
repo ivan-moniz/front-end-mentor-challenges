@@ -3,7 +3,7 @@ const modal = document.querySelector(".modal__container");
 const openModal = document.querySelectorAll(".select");
 const closeModal = document.getElementById("close__modal");
 const selection = document.querySelectorAll(".selection");
-const pledge = document.querySelector('.pledge__bottom');
+const pledge = document.querySelectorAll('.pledge__bottom');
 let btnBookmark = document.querySelector(".btn__bookmark");
 let spanMark = document.getElementById("bookmark");
 let circle = document.getElementById("circle");
@@ -28,11 +28,12 @@ closeModal.addEventListener("click", () => {
 // selection code 
 selection.forEach(select => {
   select.addEventListener('click', () => {
-    pledge.classList.add('active');
-    select.classList.toggle(check);
+    pledge.forEach(bottom => {
+      bottom.classList.add('active');
+    })
+    
   });
 });
-
 
 // bookmark code 
 btnBookmark.addEventListener("click", () => {
