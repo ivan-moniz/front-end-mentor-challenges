@@ -145,6 +145,25 @@ a {
   text-align: center;
 }
 
+.btn-bookmark svg circle {
+  -webkit-transition: fill 0.2s ease;
+  transition: fill 0.2s ease;
+}
+
+.btn-bookmark svg path {
+  -webkit-transition: fill 0.2s ease;
+  transition: fill 0.2s ease;
+}
+
+
+.btn__bookmark.saved svg circle {
+  fill:hsl(176, 72%, 28%);
+}
+
+.btn__bookmark.saved svg path {
+  fill: white;
+}
+
 
 .btn__bookmark > span {
   margin: 0 1.5rem;

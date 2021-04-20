@@ -37,19 +37,28 @@ selection.forEach(select => {
 
 // bookmark code 
 btnBookmark.addEventListener("click", () => {
-  if (!clicked) {
-    clicked = true;
-    spanMark.innerHTML = "<span>Bookmarked</span>";
-    spanMark.style.color = "hsl(176, 72%, 28%)";
-    btnBookmark.style.backgroundColor = "hsla(176, 50%, 47%, .1)";
-    circle.style.fill = "hsl(176, 72%, 28%)";
-    path.style.fill = "#fff";
+  // if (!clicked) {
+  //   clicked = true;
+  //   spanMark.innerHTML = "<span>Bookmarked</span>";
+  //   // spanMark.style.color = "hsl(176, 72%, 28%)";
+  //   // btnBookmark.style.backgroundColor = "hsla(176, 50%, 47%, .1)";
+  //   // circle.style.fill = "hsl(176, 72%, 28%)";
+  //   // path.style.fill = "#fff";
+
+  // } else {
+  //   clicked = false;
+  //   spanMark.innerHTML = "<span>Bookmark</span>";
+  //   spanMark.style.color = "hsl(0, 0%, 48%)";
+  //   btnBookmark.style.backgroundColor = "hsla(0, 0%, 48%, 0.2)";
+  //   circle.style.fill = "#2F2F2F";
+  //   path.style.fill = "#B1B1B1";
+  // }
+
+  if (btnBookmark.classList.contains('saved')) {
+    btnBookmark.classList.remove('saved');
+    btnBookmarkText.textContent = 'bookmark';
   } else {
-    clicked = false;
-    spanMark.innerHTML = "<span>Bookmark</span>";
-    spanMark.style.color = "hsl(0, 0%, 48%)";
-    btnBookmark.style.backgroundColor = "hsla(0, 0%, 48%, 0.2)";
-    circle.style.fill = "#2F2F2F";
-    path.style.fill = "#B1B1B1";
+    btnBookmark.classList.add('saved');
+    btnBookmarkText.textContent = 'bookmarked';
   }
 });
