@@ -126,7 +126,17 @@ a {
   padding: 18px 40px;
 }
 
-.btn__support {
+.success-modal__btn {
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  padding: 18px 40px;
+  margin-top: 1rem;
+}
+
+.btn__support, .success-modal__btn {
   background-color: var(--moderate-cyan);
   color: #fff;
 }
@@ -165,7 +175,6 @@ a {
 .btn__bookmark.saved svg path {
   fill: white;
 }
-
 
 .btn__bookmark > span {
   margin: 0 1.5rem;
@@ -330,9 +339,11 @@ a {
   background-color: #fff;
   padding: 2rem;
   width: 600px;
-  height: 780px;
+  height: 68vh;
   margin-top: 10rem;
   border-radius: 10px;
+  overflow: auto;
+  position: fixed;
 }
 
 .modal__top {
@@ -372,21 +383,22 @@ a {
   margin: 1em 0;
 }
 
-i.fa-circle {
-  color: #f5f5f5;
-  font-size: 25px;
-  font-weight: 400;
+.success__modal.active {
+  opacity: 1;
+  visibility: visible;
 }
-
-/* i.fa-dot-circle {
-  font-size: 25px;
-  font-weight: 400;
-  border: 1px solid #f5f5f5;
-  display: flex;
-} */
-
-i.fa-circle:hover {
-  color: var(--moderate-cyan);
+.success__modal {
+  position: fixed;
+  background-color: #fff;
+  padding: 1.875rem 1.25rem;
+  border-radius: 0.6875rem;
+  border: 2px solid #f3f3f3;
+  text-align: center;
+  width: 90%;
+  top: 50%;
+  max-width: 500px;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .pledge__flex {
@@ -443,8 +455,6 @@ i.fa-circle:hover {
   display: flex;
 }
 
-
-
 .pledge__form > input {
   width: 70px;
   height: 40px;
@@ -474,4 +484,40 @@ i.fa-circle:hover {
 .pledge__title {
   font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.btn__checkbox {
+  background: transparent;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 1px solid #97979756;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn__checkbox:hover {
+  border: 1px solid var(--moderate-cyan);
+}
+
+.btn__checkbox::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #3cb4ac;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0.3s ease, opacity 0.3s ease;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+.btn__checkbox.selected::after {
+  visibility: visible;
+  opacity: 1;
 }
