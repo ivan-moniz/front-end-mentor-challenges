@@ -154,10 +154,12 @@ a {
   -webkit-transition: fill 0.2s ease;
   transition: fill 0.2s ease;
 }
-
+.btn__bookmark.saved span {
+  color: var(--dark-cyan);
+}
 
 .btn__bookmark.saved svg circle {
-  fill:hsl(176, 72%, 28%);
+  fill: var(--dark-cyan);
 }
 
 .btn__bookmark.saved svg path {
