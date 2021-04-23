@@ -28,7 +28,7 @@ export function addPledgeField(card, amount) {
       <p class="primary-paragraph">Enter your pledge</p>
       <form class="continue-form">
         <input type="number" value="${amount}" min="${amount}" />
-        <button class="btn-primary" type="submit">Continue</button>
+        <button class="btn-secondary" type="submit">Continue</button>
       </form>
     </div>`;
   }

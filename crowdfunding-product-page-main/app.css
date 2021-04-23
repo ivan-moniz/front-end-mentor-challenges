@@ -469,19 +469,64 @@ a {
   color: var(--moderate-cyan);
 }
 
-.pledge__form > input {
-  width: 70px;
+.pledge-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem 0rem 2rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid #97979756;
+}
+
+.pledge-content .primary-paragraph {
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.pledge-content .continue-form > input {
+  width: 85px;
   height: 40px;
+  border-radius: 20px;
   padding: 1em;
   outline: none;
-  border-radius: 20px;
-  border: 1px solid #f5f5f5;
+  border: 1px solid #97979756;
   cursor: pointer;
   margin-right: 0.6em;
 }
 
-.pledge__form .pledge__button {
-  width: 90px;
+.pledge-content .continue-form {
+  position: relative;
+}
+
+.add-pledge-area .pledge-content .continue-form::after {
+  content: '$';
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(138, 138, 138, 0.753);
+  top: 45.5%;
+  left: 60%;
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-70%);
+}
+
+.continue-form input[type='number'] {
+
+  border: 1px solid rgba(138, 138, 138, 0.301);
+  border-radius: 40px;
+  padding-left: 1.8rem;
+  padding-right: .4rem;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  max-width: 7.5rem;
+}
+
+.btn-secondary {
+  width: 85px;
   height: 40px;
   background-color: var(--dark-cyan);
   color: #fff;
@@ -491,13 +536,8 @@ a {
   font-weight: bold;
 }
 
-.pledge__form > input:hover {
+.continue-form > input:hover {
   border: 1px solid var(--moderate-cyan);
-}
-
-.pledge__title {
-  font-size: 0.8rem;
-  color: rgba(0, 0, 0, 0.3);
 }
 
 .btn__checkbox {
