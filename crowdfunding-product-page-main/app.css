@@ -22,6 +22,11 @@ body {
   font-family: "Commissioner", sans-serif;
 }
 
+html.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -136,7 +141,8 @@ a {
   margin-top: 1rem;
 }
 
-.btn__support, .success-modal__btn {
+.btn__support,
+.success-modal__btn {
   background-color: var(--moderate-cyan);
   color: #fff;
 }
@@ -151,8 +157,7 @@ a {
   border-radius: 40px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+ 
 }
 
 .btn-bookmark svg circle {
@@ -164,7 +169,7 @@ a {
   -webkit-transition: fill 0.2s ease;
   transition: fill 0.2s ease;
 }
-.btn__bookmark.saved span {
+.btn__bookmark.saved #bookmark {
   color: var(--dark-cyan);
 }
 
@@ -176,9 +181,23 @@ a {
   fill: white;
 }
 
-.btn__bookmark > span {
-  margin: 0 1.5rem;
+.btn__bookmark #bookmark {
+  margin-left: -20px;
+  background: #e6e6e6;
+  height: 56px;
   font-weight: bold;
+  width: 150px;
+  border-radius: 0 50px 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn__bookmark > svg {
+  height: 56px;
+  margin: auto;
+  z-index: 1;
 }
 
 .donation__card {
@@ -317,6 +336,12 @@ a {
 }
 
 /* modal styling  */
+.modal__container.show {
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+}
+
 .modal__container {
   background-color: rgba(0, 0, 0, 0.3);
   height: 145vh;
@@ -327,12 +352,9 @@ a {
   justify-content: center;
   pointer-events: none;
   opacity: 0;
+  visibility: hidden;
   transition: opacity 0.3s;
-}
-
-.modal__container.show {
-  pointer-events: auto;
-  opacity: 1;
+  z-index: 10;
 }
 
 .modal {
@@ -344,6 +366,7 @@ a {
   border-radius: 10px;
   overflow: auto;
   position: fixed;
+  z-index: 10;
 }
 
 .modal__top {
@@ -381,6 +404,10 @@ a {
   border-radius: 10px;
   padding: 1em 0em 2em 0em;
   margin: 1em 0;
+}
+
+.faded .btn__checkbox {
+  cursor: not-allowed;
 }
 
 .success__modal.active {
@@ -440,19 +467,6 @@ a {
 
 .pledge__list:hover {
   color: var(--moderate-cyan);
-}
-
-.pledge__bottom {
-  border-top: 1px solid #f5f5f5;
-  margin-top: 1rem;
-  padding: 1em 2em 0em 2em;
-  display: none;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.pledge__bottom.active {
-  display: flex;
 }
 
 .pledge__form > input {

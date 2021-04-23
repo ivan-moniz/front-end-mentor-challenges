@@ -21,11 +21,11 @@ function modalStuff(event) {
 
     selected.forEach((card) => {
       card.classList.remove("selected");
-      card.childNodes[1].childNodes[1].classList.remove("selected");
-      card.childNodes[4].innerHTML = "";
+      card.childNodes[1].childNodes[1].childNodes[1].classList.remove("selected");
+      card.childNodes[4].innerHTML = " ";
     });
 
-    if (!target.parentElement.parentElement.classList.contains("faded")) {
+    if (!target.parentElement.parentElement.parentElement.classList.contains("faded")) {
       target.classList.add("selected");
       card.classList.add("selected");
     }
@@ -43,8 +43,9 @@ function modalStuff(event) {
     closeModal(modalBg, modalSuccess);
   }
 
-  paidEdition.forEach(element =>
-    element.addEventListener('submit', () => {
+  paidEdition.forEach((element) =>
+    element.addEventListener("submit", (e) => {
+      e.preventDefault();
       closeModal(modalBg, modal);
       openModal(modalBg, modalSuccess);
     })
