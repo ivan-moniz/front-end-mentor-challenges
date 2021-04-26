@@ -344,10 +344,10 @@ a {
 
 .modal__container {
   background-color: rgba(0, 0, 0, 0.3);
-  height: 145vh;
-  width: 98.9vw;
+  height: 100%;
+  width: 100%;
   top: 0;
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   pointer-events: none;
@@ -410,12 +410,26 @@ a {
   cursor: not-allowed;
 }
 
+.sucess.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sucess {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
 .success__modal.active {
   opacity: 1;
   visibility: visible;
 }
 .success__modal {
-  position: fixed;
+  position: absolute;
   background-color: #fff;
   padding: 1.875rem 1.25rem;
   border-radius: 0.6875rem;
@@ -495,7 +509,7 @@ a {
   margin-right: 0.6em;
 }
 
-.pledge-content .continue-form {
+/* .pledge-content .continue-form {
   position: relative;
 }
 
@@ -512,10 +526,10 @@ a {
   left: 60%;
   -webkit-transform: translateY(-10%);
           transform: translateY(-70%);
-}
+} */
+
 
 .continue-form input[type='number'] {
-
   border: 1px solid rgba(138, 138, 138, 0.301);
   border-radius: 40px;
   padding-left: 1.8rem;

@@ -8,6 +8,7 @@ function modalStuff(event) {
   const modalBg = document.querySelector(".modal__container"),
     modal = document.querySelector(".modal"),
     modalSuccess = document.querySelector(".success__modal"),
+    sucess = document.qu
     target = event.target,
     paidEdition = document.querySelectorAll(".paid__edition");
 
@@ -39,6 +40,7 @@ function modalStuff(event) {
   } else if (target.classList.contains("go-to-success")) {
     closeModal(modalBg, modal);
     openModal(modalBg, modalSuccess);
+
   } else if (target.classList.contains("close-success-modal")) {
     closeModal(modalBg, modalSuccess);
   }
