@@ -410,20 +410,6 @@ a {
   cursor: not-allowed;
 }
 
-.sucess.visible {
-  visibility: visible;
-  opacity: 1;
-}
-
-.sucess {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.3);
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-}
-
 .success__modal.active {
   opacity: 1;
   visibility: visible;
